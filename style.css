@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left, .right {
+    width: 48%;
+}
+
+#calendar {
+    max-width: 100%;
+    height: 40vh;
+}
+
+.train-button, .not-train-button, #submitReason, .btn1 {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(243, 230, 191, 0.947);
+    color: black;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.train-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.not-train-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.train-button:hover, .not-train-button:hover, #submitReason:hover, .btn1:hover {
+    opacity: 0.9;
+}
+
+.counters {
+    margin-top: 20px;
+}
+
+.counters p {
+    font-size: 18px;
+}
+
+#reasonDiv {
+    margin-top: 20px;
+}
+
+.trained {
+    background-color: #28a745 !important; /* Verde para entrenado */
+}
+
+.not-trained {
+    background-color: #dc3545 !important; /* Rojo para no entrenado */
+}
+
+.fc-day:hover {
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre un día */
+    background-color: #f0f0f0; /* Color de fondo al pasar el cursor */
+}
+
+.fc-day-today {
+    background-color: #ffeeba !important; /* Color de fondo para el día actual */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .controls button, .controls input, .controls label {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px 0;
+    }
+}
